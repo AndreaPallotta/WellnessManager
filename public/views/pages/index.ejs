@@ -8,7 +8,60 @@
         <link rel="stylesheet" href="../../css/style.css">
     </head>
 
+    <style>
+        /** NAVBAR **/
+        .navbar-item {
+            color: green;
+            font-size: 130%;
+        }
+
+        .navbar-item:hover {
+            font-weight: bold;
+        }
+
+        .active {
+            color: gold;
+        }
+    </style>
+
+
     <body>
-        
+        <!-- Nav Bar -->
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<!-- RIT logo -->
+			<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
+				<img src="../../assets/images/logo.jpg" alt="Logo">
+			</a>
+
+			<!-- burger menu for mobile view -->
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<a href="#" class="navbar-item active anchor-scroll" data-class-to="body" data-on-scroll="blur">
+					Homepage
+				</a>
+
+				<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
+					Profile
+				</a>
+
+
+				<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
+					Settings
+				</a>
+
+			</div>
+		</div>
+	</nav>
+    <!-- End of Nav Bar -->
+    
+    <h2>Name is: <%= name %></h2>
      </body>
 </html>

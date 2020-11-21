@@ -9,7 +9,10 @@ app.set('views', path.join(__dirname, '/public/views'))
 
 
 app.get('/', function (req, res) {
-    return res.render('pages/index')
+    var name = "testname"
+    return res.render('pages/index', {
+        name : name
+    })
 })
 
 app.listen(8080, function() {
