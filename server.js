@@ -1,10 +1,17 @@
 var express = require('express')
-var app = express()
+const ejs = require('ejs')
+const path = require('path')
 
-app.unsubscribe(express.static('public'))
+var app = express();
+app.use(express.static('public'))
 app.set('view engine', 'ejs')
-app.listen(8080)
+app.set('views', path.join(__dirname, '/public/views'))
 
-app.get('/', function(req, res) {
-    res.render('pages/index')
+
+app.get('/', function (req, res) {
+    return res.render('pages/index')
+})
+
+app.listen(8080, function() {
+    console.log("Running on port 8080")
 })

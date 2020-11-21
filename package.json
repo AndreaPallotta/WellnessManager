@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "css-build": "node-sass --omit-source-map-url public/sass/style.scss public/css/style.css",
+    "css-watch": "npm run css-build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js && npm run css-build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,9 @@
   },
   "homepage": "https://github.com/AndreaPallotta/WellnessManager#readme",
   "dependencies": {
+    "bulma": "^0.9.1",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-sass": "^5.0.0"
   }
 }
