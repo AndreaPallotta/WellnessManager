@@ -4,12 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Wellness Manager</title>
-        <link rel="stylesheet" href="../../css/style.css">
+		<title>Wellness Manager</title>
+		<script src="../../js/script.js"></script>
+		<link rel="stylesheet" href="../../css/style.css">
     </head>
 
     <style>
-        /** NAVBAR **/
+        
+		body {
+			background-image: linear-gradient(to bottom right, darkgreen, yellow);
+		}
+
         .navbar-item {
             color: green;
             font-size: 130%;
@@ -22,46 +27,125 @@
         .active {
             color: gold;
         }
+
+		.menu-selection {
+			padding: 1.3%;
+			margin: 1%;
+			width: 20vw;
+			height: 100vh;
+			background-color: greenyellow;
+			border-radius: 25px;
+			border: 5px black solid;
+		}
+
+		.menu-label {
+			color: darkcyan;
+			font-size: 130%;
+		}
+
+		hr {
+			background-color: darkcyan;
+		}
+
+		.menu-list li {
+			color: red;
+		}
     </style>
 
 
     <body>
-        <!-- Nav Bar -->
-	<nav class="navbar" role="navigation" aria-label="main navigation">
-		<div class="navbar-brand">
-			<!-- RIT logo -->
-			<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
-				<img src="../../assets/images/logo.jpg" alt="Logo">
-			</a>
-
-			<!-- burger menu for mobile view -->
-			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
-			</a>
-		</div>
-
-		<div class="navbar-menu">
-			<div class="navbar-start">
-				<a href="#" class="navbar-item active anchor-scroll" data-class-to="body" data-on-scroll="blur">
-					Homepage
-				</a>
-
+	
+		<!-- Nav Bar -->
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<!-- RIT logo -->
 				<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
-					Profile
+					<img src="../../assets/images/logo.jpg" alt="Logo">
 				</a>
 
-
-				<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
-					Settings
+				<!-- burger menu for mobile view -->
+				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
 				</a>
-
 			</div>
+
+			<div class="navbar-menu">
+				<div class="navbar-start">
+					<a href="#" class="navbar-item active anchor-scroll" data-class-to="body" data-on-scroll="blur">
+						Homepage
+					</a>
+
+					<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
+						Profile
+					</a>
+
+
+					<a href="#" class="navbar-item anchor-scroll" data-class-to="body" data-on-scroll="blur">
+						Settings
+					</a>
+
+				</div>
+			</div>
+		</nav>
+		<!-- End of Nav Bar -->
+		
+		<!-- Content Container-->
+		<div>
+			<!-- Menu -->
+			<aside class="menu menu-selection">
+				<p class="menu-label">
+				Food
+				</p>
+				<ul class="menu-list">
+				<li><a>Add Food</a></li>
+				<li><a>Remove Food</a></li>
+				<li><a>Add Food to Recipe</a></li>
+				</ul>
+				<hr>
+
+				<p class="menu-label">
+					Recipe
+				</p>
+				<ul class="menu-list">
+					<li><a>Add Recipe</a></li>
+					<li><a>Remove Recipe</a></li>
+				</ul>
+				<hr>
+
+				<p class="menu-label">
+					Log
+				</p>
+				<ul class="menu-list">
+					<li><a>Add Log</a></li>
+					<li><a>Remove Log</a></li>
+				</ul>
+				<hr>
+
+				<p class="menu-label">
+					Exercise
+				</p>
+				<ul class="menu-list">
+					<li><a>Add Exercise</a></li>
+					<li><a>Remove Exercise</a></li>
+				</ul>
+			</aside>
+			<!-- End of Menu -->
+
+			<!-- Main -->
+			<main>
+				Test
+			</main>
+			<!-- End of Main -->
+
 		</div>
-	</nav>
-    <!-- End of Nav Bar -->
-    
-    <h2>Name is: <%= name %></h2>
-     </body>
+		<!-- End of Content Container -->
+
+		
+	 </body>
+	 
+
+<!-- -->
+<!-- End of -->
 </html>

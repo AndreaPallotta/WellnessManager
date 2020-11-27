@@ -9,9 +9,7 @@ app.set('views', path.join(__dirname, '/public/views'))
 
 
 app.get('/', function (req, res) {
-    var name = "testname"
     return res.render('pages/index', {
-        name : name
     })
 })
 
